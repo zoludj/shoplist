@@ -19,11 +19,14 @@ class ShoppingListApplication {
                 Integer userInput = Integer.valueOf(scanner.nextLine());
                 switch (userInput) {
                     case 1:
+
+
                         System.out.println("Enter product name: ");
                         String name = scanner.nextLine();
                         System.out.println("Enter product price: ");
                         BigDecimal price = new BigDecimal(scanner.nextLine());
                         Product product = new Product();
+
                         product.setName(name);
                         product.setPrice(price);
                         product.setId(productIdSequence);
@@ -36,6 +39,7 @@ class ShoppingListApplication {
                         Product findProductResult = productRepository.get(id);
                         System.out.println(findProductResult);
                     case 3:
+
                         return;
                 }
             } catch (Exception e) {

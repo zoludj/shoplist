@@ -1,5 +1,6 @@
 package com.javaguru.shoppinglist;
 
+import javax.swing.*;
 import java.math.BigDecimal;
 
 public class Product {
@@ -7,29 +8,35 @@ public class Product {
     private Long id;
     private String name;
     private BigDecimal price;
+    private String category;
+    private int discount;
+    private String info;
 
-    public Long getId() {
-        return id;
-    }
+    public String getCategory() { return category; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public void setCategory(String category) { this.category = category; }
 
-    public String getName() {
-        return name;
-    }
+    public int getDiscount() { return discount; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+    public void setDiscount(int discount) { this.discount = discount; }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
 
+    public String getInfo() { return info; }
+
+    public void setInfo(String info) { this.info = info; }
+
+
+    public Long getId() { return id; }
+
+    public void setId(Long id) { this.id = id; }
+
+    public String getName() { return name; }
+
+    public void setName(String name) { this.name = name; }
+
+
+    public BigDecimal getPrice() { return price; }
+
+    public void setPrice(BigDecimal price) { this.price = price; }
 }
