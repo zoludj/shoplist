@@ -26,10 +26,26 @@ class ShoppingListApplication {
                         Product product = new Product();
                         createProduct(validator, scanner, product);
                         System.out.println(product + "created");
+                        product.setId(productIdSequence);
+                        productRepository.put(productIdSequence, product);
+                        productIdSequence++;
+                        System.out.println("Result: " + product.getId());
+                        break;
+                    case 2:
+                        System.out.println("Enter product id: ");
+                        long id = scanner.nextLong();
+                        Product findProductResult = productRepository.get(id);
+                        System.out.println(findProductResult);
+                        break;
+                    case 3:
+                        break;
                 }
+            } catch (Exception e) {
+                System.out.println("Error! Please try again.");
             }
         }
     }
+
 
     private static void createProduct(Validator validator, Scanner scanner, Product product) {
         System.out.println("Enter product name: ");
@@ -47,23 +63,11 @@ class ShoppingListApplication {
         product.setDiscount(discount);
         product.setName(name);
         product.setPrice(price);
-        product.setId(productIdSequence);
-        productRepository.put(productIdSequence, product);
-        productIdSequence++;
-        System.out.println("Result: " + product.getId());
-        case 2:
-        System.out.println("Enter product id: ");
-        long id = scanner.nextLong();
-        Product findProductResult = productRepository.get(id);
-        System.out.println(findProductResult);
-        case 3:
 
-        return;
+
     }
-} catch(Exception e)
-        System.out.println("Error! Please try again.");
-        {
+}
 
-        }
+
 
 
