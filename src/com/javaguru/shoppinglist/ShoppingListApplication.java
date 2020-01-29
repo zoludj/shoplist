@@ -21,6 +21,7 @@ class ShoppingListApplication {
                 System.out.println("3. Exit");
                 Integer userInput = Integer.valueOf(scanner.nextLine());
                 switch (userInput) {
+
                     case 1:
                         Validator validator = new Validator();
                         Product product = new Product();
@@ -31,12 +32,14 @@ class ShoppingListApplication {
                         productIdSequence++;
                         System.out.println("Result: " + product.getId());
                         break;
+
                     case 2:
                         System.out.println("Enter product id: ");
                         long id = scanner.nextLong();
                         Product findProductResult = productRepository.get(id);
                         System.out.println(findProductResult);
                         break;
+
                     case 3:
                         break;
                 }
