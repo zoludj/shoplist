@@ -11,8 +11,8 @@ public class Validator {
         return true;
     }
 
-    public boolean validateDiscount(int discount) {
-        if (discount > 100) {
+    public boolean validateDiscount(double discount) {
+        if ( discount > 100) {
             return false;
         }
         return true;
