@@ -10,7 +10,7 @@ public class ProductService {
         return createdProduct.getId();
     }
 
-    public  Product findProductById(Long id) {
+    public Product findProductById(Long id) {
         return repository.findProductByID(id);
     }
 }

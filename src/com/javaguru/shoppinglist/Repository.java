@@ -12,14 +12,14 @@ public class Repository {
 
     public Product insert(Product product) {
         product.setId(PRODUCT_ID_SEQUENCE);
-        products.put(PRODUCT_ID_SEQUENCE,product);
+        products.put(PRODUCT_ID_SEQUENCE, product);
         PRODUCT_ID_SEQUENCE++;
         return product;
     }
 
     public Product findProductByID(Long id) {
-        return products.get(id);
+        return null;
     }
-
 }
+
 
