@@ -37,7 +37,7 @@ public class Console {
         System.out.println("Please, Enter product info: ");
         String info = scanner.nextLine();
 
-        Product product = new Product();
+       Product product = new Product();
         product.setName(name);
         product.setInfo(info);
 

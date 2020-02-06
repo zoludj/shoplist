@@ -3,8 +3,8 @@ package com.javaguru.shoppinglist;
 
 import java.math.BigDecimal;
 
-public class DiscountValidatorRule implements ProductValidatorRule {
-    public void validate(Product product) throws Exception {
+public class DiscountValidatorRule implements com.javaguru.shoppinglist.ProductValidatorRule {
+    public void validate(com.javaguru.shoppinglist.Product product) throws Exception {
         BigDecimal discount = product.getDiscount();
         if (discount.intValue() < 0 || discount.intValue() > 100) ;
         {
