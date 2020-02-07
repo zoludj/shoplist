@@ -2,14 +2,13 @@ package com.javaguru.shoppinglist;
 
 import java.math.BigDecimal;
 
-public class ValidationRulePriceDiscount {
-    public void validate (Product product) throws Exception {
+public class ValidationRulePriceDiscount implements ProductValidatorRule{
+    public void validate(Product product) throws Exception {
         BigDecimal price = product.getPrice();
-
-        if (price.intValue() <20 );{
+        BigDecimal discount = product.getDiscount();
+        if (price.intValue() < 20 && discount.intValue()!=0) ;
+        {
             throw new Exception("If price less then 20, discount not apply");
-
         }
     }
-
 }

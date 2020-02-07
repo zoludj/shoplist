@@ -20,6 +20,10 @@ public class Repository {
     public Product findProductByID(Long id) {
         return null;
     }
+
+    public void getAll() {
+
+    }
 }
 
 
